@@ -1,2 +1,2 @@
 <?php 
-header ("location:assets/index.php");
+header ("location:modul/menu");

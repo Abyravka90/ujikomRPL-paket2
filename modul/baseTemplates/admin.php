@@ -1,5 +1,5 @@
 <?php include "../../config/header.php"; ?>
-<?php include "../../config/sidebar.php"; ?>
+<?php include "../../config/constant.php"; ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <h1 class="navbar-brand">Aplikasi Pengaduan Masyarakat</h1>

@@ -1,4 +1,6 @@
-<?php const sidebar = '
+<?php 
+
+const sidebar = '
 <div class="col-lg-3">
         <div class="card">
             <div class="card-body">
@@ -10,3 +12,5 @@
             </div>
         </div>
     </div>';
+
+$server = $_SERVER['HTTP_HOST'].'/ujikomRPL/';

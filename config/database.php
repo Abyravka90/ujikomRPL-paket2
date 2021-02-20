@@ -1,7 +1,7 @@
 <?php 
 $server = 'localhost';
-$username = 'root';
+$user = 'root';
 $pass = '';
 $dbName = 'pengaduan_masyarakat';
 
-$conn = mysqli_connect($server, $username, $pass, $dbName);
+$conn = mysqli_connect($server, $user, $pass, $dbName);
