@@ -14,13 +14,13 @@ if($queryDataAdmin){
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['level'] = $level;
-            header ("location:http://".$server."modul/verifikasi");
+            header ("location:http://".$server."modul/administrator");
         }else if($row -> level == 'petugas'){
             @session_start();
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['level'] = $level;
-            header ("location:http://".$server."modul/validasi");
+            header ("location:http://".$server."modul/petugas");
         }else{
             echo '<script>alert("akun anda belum aktif hubungi admin");window.location.href="index.php";</script>';
         }
