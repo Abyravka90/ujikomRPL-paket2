@@ -4,6 +4,7 @@
 <script src="../../assets/js/jquery-3.5.1.js"></script>
 <script src="../../assets/js/bootstrap.bundle.js"></script>
 <script src="../../assets/js/bootstrap.min.js"></script>  
+<!-- DATATABLES -->
 <script type="text/javascript" src="../../assets/js/jquery.dataTables.js"></script>
 <script type="text/javascript" src="../../assets/js/dataTables.buttons.min.js"></script>
 <script type="text/javascript" src="../../assets/js/jszip.min.js"></script>
