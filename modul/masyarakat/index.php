@@ -16,10 +16,10 @@ if(!isset($_SESSION['username'])){
                         <?= $sidebar ?>
                     <div class="col-lg-9">
                     <div class="alert alert-warning" role="alert">
-                        <h4 class="alert-heading">Selamat Datang <?= $username ?> </h4>
+                        <h4 class="alert-heading">Selamat Datang Warga Yth <?= $username ?> </h4>
                         <p>ini adalah aplikasi pengaduan masyarakat, Masyarakat bisa melakukan : </p>
                         <hr>
-                        <p class="mb-0">1. Registrasi <br> 2. Membuat Pengaduan</p>
+                        <p class="mb-0"><b>1. Registrasi</b> (jika anda masuk halaman ini maka anda sudah terdaftar) <br> 2. Membuat Pengaduan</p>
                         </div>
                     </div>
                     </div>

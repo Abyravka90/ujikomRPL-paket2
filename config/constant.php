@@ -32,6 +32,7 @@ if (isset($_SESSION['username'])){
         <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body">
+                        <a href="http://'.$server.'modul/masyarakat/">Dashboard</a><br>
                         <a href="http://'.$server.'modul/masyarakat/pengaduan.php">Buat Pengaduan</a><br>
                         <a href="http://'.$server.'modul/masyarakat/lihatPengaduan.php">Lihat Pengaduan</a><br>
                         <a href="http://'.$server.'modul/logoutMasyarakat/">logout</a><br>
