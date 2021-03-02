@@ -13,7 +13,9 @@ if($username == $row -> username and $pass = $row -> password){
     if($row -> status == 'aktif'){
         @session_start();
         $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
+        $_SESSION['password'] = $pass;
+        $_SESSION['level'] = 'masyarakat';
+        $_SESSION['nik'] = $NIK;
         header ("location:http://".$server."modul/masyarakat");
     }else{
         echo '<script>alert("akun anda belum aktif hubungi admin");window.location.href="index.php";</script>';

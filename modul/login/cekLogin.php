@@ -11,12 +11,14 @@ if($queryDataAdmin){
     if($username == $row -> username and $pass == $row -> password){
         if($row -> level == 'admin'){
             @session_start();
+            $level = $row -> level;
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['level'] = $level;
             header ("location:http://".$server."modul/administrator");
         }else if($row -> level == 'petugas'){
             @session_start();
+            $level = $row -> level;
             $_SESSION['username'] = $username;
             $_SESSION['password'] = $password;
             $_SESSION['level'] = $level;
