@@ -1,0 +1,8 @@
+1. install XAMPP <- gratis silahkan download
+2. apabila sudah diinstall masuk kedalam direktori xampp/htdocs
+3. buat folder baru bernama ujikomRPL
+4. pindahkan semua file kedalam folder tersebut
+5. akses http://localhost/phpmyadmin/
+6. buatlah sebuah database dengan nama pengaduan_masyarakat
+7. import database yang ada di folder (zip) ke dalam database yang barusan dibuat
+8. akses aplikasi di melalui link http://localhost/ujikomRPL/

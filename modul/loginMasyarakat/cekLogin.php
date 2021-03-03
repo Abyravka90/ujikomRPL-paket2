@@ -21,5 +21,5 @@ if($username == $row -> username and $pass = $row -> password){
         echo '<script>alert("akun anda belum aktif hubungi admin");window.location.href="index.php";</script>';
     }
 } else{
-    header ("location:index.php");
+    echo '<script>alert("cek kembali data anda atau registrasi");window.location.href="index.php";</script>';
 }
