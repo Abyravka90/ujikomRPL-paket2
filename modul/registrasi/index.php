@@ -10,14 +10,15 @@ if(isset($_POST['NIK'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
     $telp = $_POST['telp'];
+    
+    //jalankan script
+    $result = mysqli_query($conn, "INSERT INTO `masyarakat`(nik, nama, username, `password`, telp, `status`) VALUES('$nik', '$nama', '$username', '$password', '$telp', 'nonAktif')") 
+    or die(mysqli_error($conn));
 
-    $sqlInsertDataMasyarakat = "INSERT INTO `masyarakat` VALUES('$nik', '$nama', '$username', '$password', '$telp', 'nonAktif')";
-    $result = mysqli_query($conn, $sqlInsertDataMasyarakat);
+    //jika data berhasil
     if($result){
-        echo "<script>alert('berhasil disimpan tunggu di aktifkan');window.location.reload();</script>";
-    } else {
-        echo "<script>alert('gagal simpan data');</script>";
-    }
+        echo "<script>alert('berhasil disimpan tunggu di aktifkan');window.location.href='index.php';</script>";
+    }    
 }
 ?>
 <div class="container-fluid">
