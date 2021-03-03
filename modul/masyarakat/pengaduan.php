@@ -14,19 +14,22 @@ if(!isset($_SESSION['username'])){
                     <div class="row">
                         <?= $sidebar ?>
                     <div class="col-lg-9">
-                    <div class="form-group">
-                    <form action="prosesPengaduan.php" method="post" enctype = "multipart/form-data" >
-                    <div class="form-group">
-                    <label for="isiLaporan">Isi Laporan : </label>
-                        <textarea placeholder="Isikan Laporan anda disini..." name="isiLaporan" id="isiLaporan" cols="30" rows="10" class="form-control"></textarea>
-                    </div>
-                    <div class="form-group">    
-                        <label for="berkasLaporan">Unggah Foto Pengaduan</label>                
-                        <input id="berkasLaporan" type="file" name="berkasLaporan" class="form-control">
-                    </div>
-                        <input type="submit" value="simpan" class="btn btn-info">
-                    </form>
-                    </div>
+                        <h2 class="text-center">.:Laporan Pengaduan:.</h2>
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="prosesPengaduan.php" method="post" enctype = "multipart/form-data" >
+                                <div class="form-group">
+                                <label for="isiLaporan">Isi Laporan : </label>
+                                    <textarea placeholder="Isikan Laporan anda disini..." name="isiLaporan" id="isiLaporan" cols="30" rows="10" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">    
+                                    <label for="berkasLaporan">Unggah Foto Pengaduan</label>                
+                                    <input id="berkasLaporan" type="file" name="berkasLaporan" class="form-control">
+                                </div>
+                                    <input type="submit" value="simpan" class="btn btn-info">
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     </div>
 <?php

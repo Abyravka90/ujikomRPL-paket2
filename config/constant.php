@@ -9,8 +9,8 @@ if (isset($_SESSION['username'])){
         <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body">
-                        <a href="">Petugas</a><br>
-                        <a href="">Registrasi</a><br>
+                        <a href="http://'.$server.'modul/administrator/lihatPetugas.php">Petugas</a><br>
+                        <a href="http://'.$server.'modul/administrator/lihatRegistrasiMasyarakat.php">Verifikasi</a><br>
                         <a href="http://'.$server.'modul/logout/">logout</a><br>
                     </div>
                 </div>

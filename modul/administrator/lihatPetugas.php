@@ -9,13 +9,7 @@ if(!isset($_SESSION['username'])){
     $username = $_SESSION['username'];
     ?>              
                     <style>
-                    .white{color:white;}
-                    .img-circle{
-                        border-radius:100%;
-                        border:1px solid;
-                        width:75px;
-                        height:75px;
-                    }
+                    .red{color:white;}
                     </style>
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <h1 class="navbar-brand">Aplikasi Pengaduan Masyarakat</h1>
@@ -24,23 +18,22 @@ if(!isset($_SESSION['username'])){
                     <div class="row">
                         <?= $sidebar ?>
                     <div class="col-lg-9">
+                    <button class="btn btn-info float-right" type="button" onClick="location.href='tambahDataPetugas.php'">+ tambah data</button>
                     <table class="table table-striped" id="datatable">
                     <thead>
                     <tr>
                         <th>No</th>
-                        <th>Tanggal Pengaduan</th>
-                        <th>Nik</th>
-                        <th>Isi Laporan</th>
-                        <th>Foto</th>
-                        <th>Status</th>
+                        <th>Nama Petugas</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>telepon</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <?php 
-                        $nik = $_SESSION['nik'];
-                        $sqlPengaduan = "SELECT * FROM `pengaduan` WHERE `nik` = $nik";
-                        $result = mysqli_query($conn, $sqlPengaduan);
+                    <?php
+                        $sqlPetugas = "SELECT * FROM `petugas`";
+                        $result = mysqli_query($conn, $sqlPetugas);
                         if(!$result)
                         {
                             echo mysqli_error($conn);
@@ -50,12 +43,11 @@ if(!isset($_SESSION['username'])){
                             {
                                 echo "<tr>
                                         <td>".$i."</td>
-                                        <td>".$row -> tgl_pengaduan." </td>
-                                        <td>".$row -> nik."</td>
-                                        <td>".$row -> isi_laporan."</td>
-                                        <td><img class='img-circle' src='../../assets/upload/pengaduan/".$row -> foto."'></img></td>
-                                        <td>".$row -> status."</td>
-                                        <td><a class='btn btn-primary' href = 'editData.php?id=".$row -> id_pengaduan."'>edit</a> | <a class='btn btn-danger white' href = 'hapusData.php?id=".$row -> id_pengaduan."'>hapus</a></td>
+                                        <td>".$row -> nama_petugas." </td>
+                                        <td>".$row -> username."</td>
+                                        <td>".$row -> password."</td>
+                                        <td>".$row -> telp."</td>
+                                        <td><a class='btn btn-primary' href = 'editPetugas.php?id=".$row -> id_petugas."'>edit</a> | <a class='btn btn-danger white' href = 'prosesHapusDataPetugas.php?id=".$row -> id_petugas."'>hapus</a></td>
                                       </tr>";
                                       $i++;
                             }

@@ -7,7 +7,6 @@ if(!isset($_SESSION['username'])){
     echo '<script>alert("session is not defined");window,location.href= "http://'.$server.'modul/login"</script>';
 } else{ 
     $username = $_SESSION['username'];
-    //echo 'selamat datang '.$username;
     
     //awal templates
     ?>
@@ -22,7 +21,7 @@ if(!isset($_SESSION['username'])){
                         <h4 class="alert-heading">Selamat Datang <?= $username ?> </h4>
                         <p>ini adalah aplikasi pengaduan masyarakat, admin bisa melakukan : </p>
                         <hr>
-                        <p class="mb-0">1. Registrasi <br> 2. Kelola Data Petugas</p>
+                        <p class="mb-0">1. Verifikasi <br> 2. Kelola Data Petugas</p>
                         </div>
                     </div>
                     </div>

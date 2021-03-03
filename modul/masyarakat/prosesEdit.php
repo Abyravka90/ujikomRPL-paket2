@@ -20,7 +20,10 @@ if($fileSize > 0)
     //mengecek keberadaan file
     $result = mysqli_query($conn, "SELECT `foto` from pengaduan WHERE id_pengaduan = '$id'") or die(mysqli_error($conn));
     $row = mysqli_fetch_object($result);
+    
+    //hapus foto yang ada di directory
     unlink('../../assets/upload/pengaduan/'.$row -> foto.'');
+
     //dirFile
     $dirFile = '../../assets/upload/pengaduan/';
     $suksesUpload = move_uploaded_file($tmpName, $dirFile.$namaFile);
@@ -36,6 +39,7 @@ if($fileSize > 0)
         echo mysqli_error($conn); 
     }
 }else{
+    //Kalau data uploadnya nggak berubah
     //UPDATE KE TABLE
     $resultLaporan = mysqli_query($conn, "UPDATE `pengaduan` SET tgl_pengaduan = '$tglPengaduan',
      isi_laporan = '$isiLaporan' WHERE id_pengaduan = '$id'") or die(mysqli_error($conn));
